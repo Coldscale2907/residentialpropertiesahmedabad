@@ -84,7 +84,7 @@ export default function LeadForm({ waNumber, phone, source = 'callback_form', sh
               type="text"
               required
               placeholder="Enter your full name"
-              className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+              className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green/50 focus:border-green transition-colors"
             />
             {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
           </div>
@@ -98,7 +98,7 @@ export default function LeadForm({ waNumber, phone, source = 'callback_form', sh
               type="tel"
               required
               placeholder="10-digit mobile number"
-              className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+              className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green/50 focus:border-green transition-colors"
             />
             {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
           </div>
@@ -109,14 +109,14 @@ export default function LeadForm({ waNumber, phone, source = 'callback_form', sh
               {...register('message')}
               rows={3}
               placeholder="Tell us what you're looking for"
-              className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors resize-none"
+              className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green/50 focus:border-green transition-colors resize-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-gold text-charcoal font-bold py-3 rounded-lg hover:bg-gold/90 transition-colors flex items-center justify-center gap-2 text-base"
+            className="w-full bg-green text-white font-bold py-3 rounded-lg hover:bg-green-light transition-colors flex items-center justify-center gap-2 text-base"
           >
             {isSubmitting ? (
               <><Loader2 size={18} className="animate-spin" /> Sending...</>

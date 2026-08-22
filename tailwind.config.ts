@@ -14,6 +14,8 @@ const config: Config = {
         navy: '#243B53',
         'soft-white': '#F8FAFC',
         gold: '#C8A96B',
+        green: '#3F6B44',
+        'green-light': '#8CBF6F',
         beige: '#E9DFC8',
         'border-gray': '#D9E2EC',
         'dark-text': '#102A43',

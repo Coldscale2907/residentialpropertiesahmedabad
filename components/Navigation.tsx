@@ -32,7 +32,7 @@ export default function Navigation({ waNumber, phone }: NavigationProps) {
           <span className="font-playfair font-bold text-white text-base md:text-lg tracking-tight">
             {property.name}
           </span>
-          <span className="text-gold text-[10px] font-bold tracking-[0.2em] uppercase">
+          <span className="text-green-light text-[10px] font-bold tracking-[0.2em] uppercase">
             {property.location}
           </span>
         </a>
@@ -43,7 +43,7 @@ export default function Navigation({ waNumber, phone }: NavigationProps) {
             <a
               key={link.label}
               href={link.href}
-              className="text-white/75 hover:text-gold text-sm font-medium transition-colors"
+              className="text-white/75 hover:text-green-light text-sm font-medium transition-colors"
             >
               {link.label}
             </a>
@@ -53,11 +53,13 @@ export default function Navigation({ waNumber, phone }: NavigationProps) {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href={`tel:+${phone}`}
-            onClick={() => trackCall('nav')}
-            className="border border-gold text-gold hover:bg-gold hover:text-charcoal transition-all px-5 py-2 rounded-full text-sm font-semibold"
+            href={getWhatsAppURL(waNumber, property.whatsappMessage)}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsApp('nav')}
+            className="bg-green text-white hover:bg-green-light transition-all px-5 py-2 rounded-full text-sm font-semibold"
           >
-            Get Price →
+            Enquire Now →
           </a>
         </div>
 
@@ -86,7 +88,7 @@ export default function Navigation({ waNumber, phone }: NavigationProps) {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-white/80 hover:text-gold text-base font-medium py-2 border-b border-white/10 transition-colors"
+                className="text-white/80 hover:text-green-light text-base font-medium py-2 border-b border-white/10 transition-colors"
               >
                 {link.label}
               </a>
