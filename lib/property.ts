@@ -12,7 +12,29 @@ export const property = {
   reraNumber: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/RAA14879/250225/311229',
   propertyId: 'SNB-021',
   description:
-    'Shivalik Greenfield is an upscale, low-density residential ecosystem inside Adani Shantigram, with 21-storey towers set 100 ft apart, wrapped in 70% open green space. Following the success of Greenview (60% sold within 2 months), Greenfield offers 3 BHK residences with wide living spaces and balconies, and 4 BHK penthouses with private terraces and 270° panoramic skyline views, all on earthquake-resistant RCC construction.',
+    "Welcome to Green Field by Shivalik, an exclusive residential enclave nestled inside Adani Shantigram, one of Ahmedabad's largest integrated townships. Designed for those who seek spacious living, refined aesthetics, and a serene lifestyle, Green Field offers large 3 BHK apartments and 4 BHK penthouses that redefine modern luxury, built to earthquake-resistant RCC standards with 24×7 security, CCTV surveillance, rainwater harvesting and fire safety systems throughout.",
+  livingSection: {
+    eyebrow: 'The Living',
+    heading: 'Living, Done Right',
+    subheading: 'Key features that define the design, planning, and experience.',
+    features: [
+      {
+        title: 'Green-Centric Living',
+        description: 'Expansive landscaped gardens, tree-lined pathways, and open greens designed for a life close to nature.',
+        image: '/properties/greenfield/about-2.jpg',
+      },
+      {
+        title: 'Low-Density Planning',
+        description: 'Thoughtfully spaced towers with generous setbacks ensure privacy, natural light, and a sense of openness throughout.',
+        image: '/properties/greenfield/photo-2.jpg',
+      },
+      {
+        title: 'Mindful Sustainability',
+        description: 'Green building practices, rainwater harvesting, and energy-efficient systems woven into everyday living.',
+        image: '/properties/greenfield/about-3.jpg',
+      },
+    ],
+  },
   highlights: [
     'From the success of Greenview (60% sold within 2 months)',
     '270° panoramic views across 21 storeys',

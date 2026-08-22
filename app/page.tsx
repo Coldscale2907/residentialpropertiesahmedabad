@@ -125,22 +125,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Gallery */}
-        <section id="gallery" className="section-padding bg-white">
+        {/* Living, Done Right */}
+        <section className="section-padding bg-white">
           <div className="container-max">
-            <h2 className="text-3xl font-bold text-dark-text text-center mb-2">Gallery</h2>
-            <div className="gold-line mx-auto mb-10" />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {property.images.slice(1).map((image, i) => (
-                <img
-                  key={image}
-                  src={image}
-                  alt={`${property.name} gallery photo ${i + 1}`}
-                  className="aspect-[4/3] rounded-xl object-cover w-full"
-                />
+            <p className="text-green font-semibold text-sm tracking-wide uppercase text-center mb-2">
+              {property.livingSection.eyebrow}
+            </p>
+            <h2 className="text-3xl font-bold text-dark-text text-center mb-2">{property.livingSection.heading}</h2>
+            <div className="gold-line mx-auto mb-4" />
+            <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">{property.livingSection.subheading}</p>
+            <div className="grid sm:grid-cols-3 gap-6">
+              {property.livingSection.features.map((feature) => (
+                <div key={feature.title} className="rounded-xl overflow-hidden shadow-sm border border-border-gray bg-white">
+                  <img src={feature.image} alt={feature.title} className="w-full aspect-[4/3] object-cover" />
+                  <div className="p-5">
+                    <h3 className="font-playfair font-bold text-dark-text text-lg mb-2">{feature.title}</h3>
+                    <p className="text-sm text-gray-600">{feature.description}</p>
+                  </div>
+                </div>
               ))}
             </div>
-            <SectionCTA waNumber={waNumber} phone={phone} source="gallery_cta" label="View More Photos" />
+            <SectionCTA waNumber={waNumber} phone={phone} source="living_cta" label="Learn More" />
           </div>
         </section>
 
@@ -158,6 +163,25 @@ export default function Home() {
               ))}
             </div>
             <SectionCTA waNumber={waNumber} phone={phone} source="amenities_cta" label="Request All Amenities" />
+          </div>
+        </section>
+
+        {/* Gallery */}
+        <section id="gallery" className="section-padding bg-white">
+          <div className="container-max">
+            <h2 className="text-3xl font-bold text-dark-text text-center mb-2">Gallery</h2>
+            <div className="gold-line mx-auto mb-10" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {property.images.slice(1).map((image, i) => (
+                <img
+                  key={image}
+                  src={image}
+                  alt={`${property.name} gallery photo ${i + 1}`}
+                  className="aspect-[4/3] rounded-xl object-cover w-full"
+                />
+              ))}
+            </div>
+            <SectionCTA waNumber={waNumber} phone={phone} source="gallery_cta" label="View More Photos" />
           </div>
         </section>
 
