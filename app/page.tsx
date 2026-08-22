@@ -30,7 +30,6 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl font-bold mb-4">{property.name}</h1>
               <p className="text-xl text-white/90 mb-6">{property.tagline}</p>
               <div className="gold-line mb-6" />
-              <p className="text-white/80 mb-8 max-w-xl">{property.description}</p>
               <div className="flex flex-wrap gap-4 text-sm">
                 <div className="bg-white/10 backdrop-blur rounded-lg px-4 py-2 border border-white/20">
                   <span className="text-white/60 block text-xs">Configuration</span>
@@ -49,23 +48,6 @@ export default function Home() {
 
             {/* Hero pre-register form */}
             <LeadForm waNumber={waNumber} phone={phone} source="hero_form" showConnectFooter />
-          </div>
-        </section>
-
-        {/* Highlights */}
-        <section className="section-padding">
-          <div className="container-max">
-            <h2 className="text-3xl font-bold text-dark-text text-center mb-2">Why Choose {property.name}</h2>
-            <div className="gold-line mx-auto mb-10" />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {property.highlights.map((highlight) => (
-                <div key={highlight} className="bg-white rounded-xl p-6 shadow-sm border border-border-gray flex gap-3 items-start">
-                  <CheckCircle2 className="text-green shrink-0" size={20} />
-                  <span className="text-sm text-gray-700">{highlight}</span>
-                </div>
-              ))}
-            </div>
-            <SectionCTA waNumber={waNumber} phone={phone} source="highlights_cta" label="Get Full Brochure" />
           </div>
         </section>
 
@@ -90,6 +72,23 @@ export default function Home() {
               <img src={property.aboutImages[1]} alt={`${property.name} interior`} className="rounded-xl object-cover w-full aspect-square" />
               <img src={property.aboutImages[2]} alt={`${property.name} amenity`} className="rounded-xl object-cover w-full aspect-square" />
             </div>
+          </div>
+        </section>
+
+        {/* Highlights */}
+        <section className="section-padding">
+          <div className="container-max">
+            <h2 className="text-3xl font-bold text-dark-text text-center mb-2">Why Choose {property.name}</h2>
+            <div className="gold-line mx-auto mb-10" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {property.highlights.map((highlight) => (
+                <div key={highlight} className="bg-white rounded-xl p-6 shadow-sm border border-border-gray flex gap-3 items-start">
+                  <CheckCircle2 className="text-green shrink-0" size={20} />
+                  <span className="text-sm text-gray-700">{highlight}</span>
+                </div>
+              ))}
+            </div>
+            <SectionCTA waNumber={waNumber} phone={phone} source="highlights_cta" label="Get Full Brochure" />
           </div>
         </section>
 
