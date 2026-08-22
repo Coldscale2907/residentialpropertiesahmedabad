@@ -18,7 +18,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: `${property.name} | Residential Properties Ahmedabad`,
-  description: `${property.tagline} — ${property.configurations} in ${property.location}. ${property.priceFrom}. RERA: ${property.reraNumber}.`,
+  description: `${property.tagline} ${property.configurations} in ${property.location}. ${property.priceFrom}. RERA: ${property.reraNumber}.`,
   keywords: `${property.name}, ${property.location}, residential properties Ahmedabad, ${property.configurations}`,
   robots: { index: true, follow: true },
   openGraph: {

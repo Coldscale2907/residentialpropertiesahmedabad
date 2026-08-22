@@ -172,7 +172,7 @@ export default function Home() {
                 {property.location}
               </p>
               <p className="text-gray-600 mb-6">
-                Direct entry point to the main Shantigram Road — well connected within Ahmedabad, with easy access to
+                Direct entry point to the main Shantigram Road, well connected within Ahmedabad, with easy access to
                 schools, hospitals, and retail, set within a low-density, green residential township.
               </p>
               <a

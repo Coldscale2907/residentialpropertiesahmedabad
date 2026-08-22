@@ -12,13 +12,13 @@ export const property = {
   reraNumber: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/RAA14879/250225/311229',
   propertyId: 'SNB-021',
   description:
-    'Shivalik Greenfield is an upscale, low-density residential ecosystem inside Adani Shantigram — 21-storey towers set 100 ft apart, wrapped in 70% open green space. Following the success of Greenview (60% sold within 2 months), Greenfield offers 3 BHK residences with wide living spaces and balconies, and 4 BHK penthouses with private terraces and 270° panoramic skyline views — all on earthquake-resistant RCC construction.',
+    'Shivalik Greenfield is an upscale, low-density residential ecosystem inside Adani Shantigram, with 21-storey towers set 100 ft apart, wrapped in 70% open green space. Following the success of Greenview (60% sold within 2 months), Greenfield offers 3 BHK residences with wide living spaces and balconies, and 4 BHK penthouses with private terraces and 270° panoramic skyline views, all on earthquake-resistant RCC construction.',
   highlights: [
-    'From the success of Greenview — 60% sold within 2 months',
+    'From the success of Greenview (60% sold within 2 months)',
     '270° panoramic views across 21 storeys',
     '100 ft. of space between towers',
     'Only 4 residences per floor',
-    '70% open green space — serenity in living',
+    '70% open green space for serenity in living',
     'Direct entry point to the main Shantigram Road',
     'Earthquake-resistant RCC construction',
     'Green-certified sustainability systems',
@@ -75,5 +75,5 @@ export const company = {
     { label: 'Premium Projects', value: '10+' },
   ],
   description:
-    'Slabs and Beams Realty is a specialized real estate advisory based in Ahmedabad, helping customers find premium residential and commercial properties across the city\'s fastest-growing corridors. Our team of experienced advisors provides unbiased, data-driven guidance — transparent, ethical, and result-oriented at every step.',
+    'Slabs and Beams Realty is a specialized real estate advisory based in Ahmedabad, helping customers find premium residential and commercial properties across the city\'s fastest-growing corridors. Our team of experienced advisors provides unbiased, data-driven guidance that is transparent, ethical, and result-oriented at every step.',
 }

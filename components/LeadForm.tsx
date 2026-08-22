@@ -34,7 +34,7 @@ export default function LeadForm({ waNumber, phone, source = 'callback_form', sh
     try {
       const payload = {
         access_key: process.env.NEXT_PUBLIC_FORM_ACCESS_KEY || '',
-        subject: `New Lead: ${data.name} — ${property.name}`,
+        subject: `New Lead: ${data.name} - ${property.name}`,
         from_name: property.name,
         name: data.name,
         phone: data.phone,
