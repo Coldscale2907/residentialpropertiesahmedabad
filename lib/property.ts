@@ -11,6 +11,13 @@ export const property = {
   unitSize: '1,379 – 2,365 sq ft (RERA Area) · up to 4,548 sq ft SBU for 4 BHK Penthouse',
   reraNumber: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/RAA14879/250225/311229',
   propertyId: 'SNB-021',
+  landmarks: [
+    'SG Highway & Sardar Patel Ring Road',
+    'Gandhinagar',
+    'Top schools within Shantigram Township',
+    'Healthcare centers nearby',
+    'Shopping complexes & business hubs',
+  ],
   description:
     "Welcome to Green Field by Shivalik, an exclusive residential enclave nestled inside Adani Shantigram, one of Ahmedabad's largest integrated townships. Designed for those who seek spacious living, refined aesthetics, and a serene lifestyle, Green Field offers large 3 BHK apartments and 4 BHK penthouses that redefine modern luxury, built to earthquake-resistant RCC standards with 24×7 security, CCTV surveillance, rainwater harvesting and fire safety systems throughout.",
   livingSection: {
@@ -98,4 +105,6 @@ export const company = {
   ],
   description:
     'Slabs and Beams Realty is a specialized real estate advisory based in Ahmedabad, helping customers find premium residential and commercial properties across the city\'s fastest-growing corridors. Our team of experienced advisors provides unbiased, data-driven guidance that is transparent, ethical, and result-oriented at every step.',
+  disclaimer:
+    'Disclaimer: Slabs and Beams Realty is not marketing these real estate projects (“Projects”) and is not acting on behalf of the developer of these projects. The projects have been displayed for information purposes only. The information and data published herein with respect to the project are collected from publicly available sources.',
 }

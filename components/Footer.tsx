@@ -9,6 +9,7 @@ export default function Footer() {
         <p className="text-sm text-white/60">{property.location}</p>
         <p className="text-xs text-white/40 max-w-2xl break-words">RERA Reg. No: {property.reraNumber}</p>
         <p className="text-xs text-white/40">Marketed by {company.name}</p>
+        <p className="text-xs text-white/30 max-w-3xl pt-4 leading-relaxed">{company.disclaimer}</p>
         <p className="text-xs text-white/40 pt-4">
           &copy; {new Date().getFullYear()} {property.name}. All rights reserved.
         </p>

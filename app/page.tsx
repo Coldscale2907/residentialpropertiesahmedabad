@@ -198,6 +198,14 @@ export default function Home() {
                 Direct entry point to the main Shantigram Road, well connected within Ahmedabad, with easy access to
                 schools, hospitals, and retail, set within a low-density, green residential township.
               </p>
+              <h3 className="font-playfair font-bold text-dark-text text-lg mb-3">Key Landmarks Nearby</h3>
+              <ul className="space-y-2 mb-6">
+                {property.landmarks.map((landmark) => (
+                  <li key={landmark} className="flex items-start gap-2 text-sm text-gray-700">
+                    <CheckCircle2 className="text-green shrink-0 mt-0.5" size={16} /> {landmark}
+                  </li>
+                ))}
+              </ul>
               <a
                 href={property.mapPlaceUrl}
                 target="_blank"
