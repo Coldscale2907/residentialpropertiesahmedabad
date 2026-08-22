@@ -8,3 +8,6 @@ next-env.d.ts
 .claude/
 .dev-server.log
 .dev-server.err.log
+
+# Local Netlify folder
+.netlify
