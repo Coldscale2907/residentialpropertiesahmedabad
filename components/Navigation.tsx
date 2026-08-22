@@ -8,7 +8,9 @@ import { property } from '@/lib/property'
 
 const navLinks = [
   { label: 'Home', href: '#' },
-  { label: 'Overview', href: '#overview' },
+  { label: 'About', href: '#about' },
+  { label: 'Highlights', href: '#highlights' },
+  { label: 'Pricing', href: '#pricing' },
   { label: 'Amenities', href: '#amenities' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Location', href: '#location' },

@@ -52,7 +52,7 @@ export default function Home() {
         </section>
 
         {/* About the project */}
-        <section className="section-padding bg-white">
+        <section id="about" className="section-padding bg-white">
           <div className="container-max grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="text-3xl font-bold text-dark-text mb-2">About {property.name}</h2>
@@ -76,7 +76,7 @@ export default function Home() {
         </section>
 
         {/* Highlights */}
-        <section className="section-padding">
+        <section id="highlights" className="section-padding">
           <div className="container-max">
             <h2 className="text-3xl font-bold text-dark-text text-center mb-2">Why Choose {property.name}</h2>
             <div className="gold-line mx-auto mb-10" />
@@ -93,7 +93,7 @@ export default function Home() {
         </section>
 
         {/* Pricing / Configuration */}
-        <section className="section-padding bg-beige/30">
+        <section id="pricing" className="section-padding bg-beige/30">
           <div className="container-max">
             <h2 className="text-3xl font-bold text-dark-text text-center mb-2">Configuration &amp; Pricing</h2>
             <div className="gold-line mx-auto mb-10" />
