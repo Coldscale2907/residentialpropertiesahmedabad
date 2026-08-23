@@ -1,11 +1,11 @@
-import { CheckCircle2, MapPin, Building2, TrendingUp } from 'lucide-react'
+import { CheckCircle2, MapPin, TrendingUp } from 'lucide-react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import LeadForm from '@/components/LeadForm'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
 import MobileStickyBar from '@/components/MobileStickyBar'
 import SectionCTA from '@/components/SectionCTA'
-import { property, company } from '@/lib/property'
+import { property } from '@/lib/property'
 
 export default function Home() {
   const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || '919898989898'
@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Navigation waNumber={waNumber} phone={phone} />
 
-      <main className="pb-14 md:pb-0">
+      <main>
         {/* Hero */}
         <section
           id="overview"
@@ -24,9 +24,6 @@ export default function Home() {
         >
           <div className="container-max grid md:grid-cols-[1.2fr_1fr] gap-10 items-start">
             <div className="text-white">
-              <p className="text-green-light font-semibold text-sm tracking-wide uppercase mb-3">
-                {property.location} &middot; {property.status}
-              </p>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">{property.name}</h1>
               <p className="text-xl text-white/90 mb-6">{property.tagline}</p>
               <div className="gold-line mb-6" />
@@ -227,26 +224,6 @@ export default function Home() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-          </div>
-        </section>
-
-        {/* About Slabs and Beams Realty */}
-        <section className="section-padding bg-charcoal text-white">
-          <div className="container-max text-center max-w-3xl mx-auto">
-            <Building2 className="text-green-light mx-auto mb-4" size={32} />
-            <h2 className="text-3xl font-bold mb-2">About {company.name}</h2>
-            <div className="gold-line mx-auto mb-6" />
-            <p className="text-white/80 mb-8">{company.tagline}</p>
-            <div className="grid grid-cols-3 gap-4 mb-8">
-              {company.stats.map((stat) => (
-                <div key={stat.label} className="bg-white/5 border border-white/10 rounded-xl px-4 py-5">
-                  <div className="text-2xl font-bold text-green-light">{stat.value}</div>
-                  <div className="text-xs text-white/60 mt-1 uppercase tracking-wide">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-            <p className="text-white/70 text-sm mb-8">{company.description}</p>
-            <SectionCTA waNumber={waNumber} phone={phone} source="about_company_cta" label="Talk to an Advisor" dark />
           </div>
         </section>
 
