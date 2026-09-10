@@ -1,9 +1,8 @@
 'use client'
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { CheckCircle2, Loader2, MessageCircle, Phone } from 'lucide-react'
+import { Loader2, MessageCircle, Phone } from 'lucide-react'
 import { getWhatsAppURL, trackFormSubmit, trackWhatsApp, trackCall } from '@/lib/utils'
 import { property } from '@/lib/property'
 
@@ -23,7 +22,6 @@ interface LeadFormProps {
 }
 
 export default function LeadForm({ waNumber, phone, source = 'callback_form', showConnectFooter = false }: LeadFormProps) {
-  const [submitted, setSubmitted] = useState(false)
   const {
     register,
     handleSubmit,
@@ -51,81 +49,71 @@ export default function LeadForm({ waNumber, phone, source = 'callback_form', sh
       const result = await res.json()
       if (result.success) {
         trackFormSubmit(source)
-        setSubmitted(true)
+        window.location.href = '/thankyou/'
       } else {
         throw new Error(result.message)
       }
     } catch {
       trackFormSubmit(source)
-      setSubmitted(true)
+      window.location.href = '/thankyou/'
     }
   }
 
   return (
     <div className="bg-white rounded-2xl p-8 shadow-2xl">
-      {submitted ? (
-        <div className="text-center py-8">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <CheckCircle2 size={32} className="text-green-600" />
-          </div>
-          <h3 className="font-playfair text-dark-text text-xl font-bold mb-2">Request Received!</h3>
-          <p className="text-gray-500 text-sm mt-2">Our team will be in touch soon.</p>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+        <input type="hidden" name="botcheck" />
+
+        <div>
+          <label className="block text-sm font-semibold text-dark-text mb-1">
+            Your Name <span className="text-red-500">*</span>
+          </label>
+          <input
+            {...register('name')}
+            type="text"
+            required
+            placeholder="Enter your full name"
+            className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green/50 focus:border-green transition-colors"
+          />
+          {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
         </div>
-      ) : (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-          <input type="hidden" name="botcheck" />
 
-          <div>
-            <label className="block text-sm font-semibold text-dark-text mb-1">
-              Your Name <span className="text-red-500">*</span>
-            </label>
-            <input
-              {...register('name')}
-              type="text"
-              required
-              placeholder="Enter your full name"
-              className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green/50 focus:border-green transition-colors"
-            />
-            {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
-          </div>
+        <div>
+          <label className="block text-sm font-semibold text-dark-text mb-1">
+            Mobile Number <span className="text-red-500">*</span>
+          </label>
+          <input
+            {...register('phone')}
+            type="tel"
+            required
+            placeholder="10-digit mobile number"
+            className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green/50 focus:border-green transition-colors"
+          />
+          {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
+        </div>
 
-          <div>
-            <label className="block text-sm font-semibold text-dark-text mb-1">
-              Mobile Number <span className="text-red-500">*</span>
-            </label>
-            <input
-              {...register('phone')}
-              type="tel"
-              required
-              placeholder="10-digit mobile number"
-              className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green/50 focus:border-green transition-colors"
-            />
-            {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
-          </div>
+        <div>
+          <label className="block text-sm font-semibold text-dark-text mb-1">Message (optional)</label>
+          <textarea
+            {...register('message')}
+            rows={3}
+            placeholder="Tell us what you're looking for"
+            className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green/50 focus:border-green transition-colors resize-none"
+          />
+        </div>
 
-          <div>
-            <label className="block text-sm font-semibold text-dark-text mb-1">Message (optional)</label>
-            <textarea
-              {...register('message')}
-              rows={3}
-              placeholder="Tell us what you're looking for"
-              className="w-full border border-border-gray rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green/50 focus:border-green transition-colors resize-none"
-            />
-          </div>
-
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-green text-white font-bold py-3 rounded-lg hover:bg-green-light transition-colors flex items-center justify-center gap-2 text-base"
-          >
-            {isSubmitting ? (
-              <><Loader2 size={18} className="animate-spin" /> Sending...</>
-            ) : (
-              'Request Callback →'
-            )}
-          </button>
-        </form>
-      )}
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-green text-white font-bold py-3 rounded-lg hover:bg-green-light transition-colors flex items-center justify-center gap-2 text-base"
+        >
+          {isSubmitting ? (
+            <><Loader2 size={18} className="animate-spin" /> Sending...</>
+          ) : (
+            'Request Callback →'
+          )}
+        </button>
+      </form>
 
       {showConnectFooter && (
         <div className="mt-5 pt-5 border-t border-border-gray">
