@@ -5,6 +5,7 @@ import LeadForm from '@/components/LeadForm'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
 import MobileStickyBar from '@/components/MobileStickyBar'
 import SectionCTA from '@/components/SectionCTA'
+import OfferBanner from '@/components/OfferBanner'
 import { property } from '@/lib/property'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
 
   return (
     <>
+      <OfferBanner />
       <Navigation waNumber={waNumber} phone={phone} />
 
       <main>

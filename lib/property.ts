@@ -6,11 +6,16 @@ export const property = {
   tagline: 'Big on Space. Big on Life.',
   location: 'Adani Shantigram, Ahmedabad',
   status: 'Under Construction / New Launch',
-  priceFrom: '₹1.85 Cr All Inclusive Onwards',
+  priceFrom: '₹1.89 Cr All Inclusive Onwards',
   configurations: '3 BHK & 4 BHK Penthouses',
   unitSize: '1,379 – 2,365 sq ft (RERA Area) · up to 4,548 sq ft SBU for 4 BHK Penthouse',
   reraNumber: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/RAA14879/250225/311229',
   propertyId: 'SNB-021',
+  offer: {
+    title: 'Exclusive Festival Offer',
+    highlight: 'For only 20 units',
+    terms: 'Pay 30% in two months and remaining payment on possession. Limited time offer.',
+  },
   landmarks: [
     'SG Highway & Sardar Patel Ring Road',
     'Gandhinagar',
