@@ -42,13 +42,13 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-4 bg-gold text-charcoal rounded-lg px-5 py-3 shadow-lg flex items-start gap-3 max-w-md">
-                <Sparkles size={22} className="shrink-0 mt-0.5" />
+              <div className="mt-5 bg-gold text-charcoal rounded-xl px-7 py-6 shadow-2xl flex items-start gap-4 max-w-xl border-2 border-white/30">
+                <Sparkles size={36} className="shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-sm leading-tight">
+                  <p className="font-bold text-xl leading-tight">
                     {property.offer.title} &middot; {property.offer.highlight}
                   </p>
-                  <p className="text-xs font-medium mt-1 leading-snug">{property.offer.terms}</p>
+                  <p className="text-base font-medium mt-2 leading-snug">{property.offer.terms}</p>
                 </div>
               </div>
             </div>
