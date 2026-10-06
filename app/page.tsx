@@ -1,11 +1,10 @@
-import { CheckCircle2, MapPin, TrendingUp } from 'lucide-react'
+import { CheckCircle2, MapPin, TrendingUp, Sparkles } from 'lucide-react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import LeadForm from '@/components/LeadForm'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
 import MobileStickyBar from '@/components/MobileStickyBar'
 import SectionCTA from '@/components/SectionCTA'
-import OfferBanner from '@/components/OfferBanner'
 import { property } from '@/lib/property'
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
 
   return (
     <>
-      <OfferBanner />
       <Navigation waNumber={waNumber} phone={phone} />
 
       <main>
@@ -41,6 +39,16 @@ export default function Home() {
                 <div className="bg-white/10 backdrop-blur rounded-lg px-4 py-2 border border-white/20">
                   <span className="text-white/60 block text-xs">Price</span>
                   {property.priceFrom}
+                </div>
+              </div>
+
+              <div className="mt-4 bg-gold text-charcoal rounded-lg px-5 py-3 shadow-lg flex items-start gap-3 max-w-md">
+                <Sparkles size={22} className="shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-sm leading-tight">
+                    {property.offer.title} &middot; {property.offer.highlight}
+                  </p>
+                  <p className="text-xs font-medium mt-1 leading-snug">{property.offer.terms}</p>
                 </div>
               </div>
             </div>
